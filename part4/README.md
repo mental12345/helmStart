@@ -1,4 +1,4 @@
-#Installing our first chart
+# Installing our first chart
 We'll create a new namespace with:
 
 ```
