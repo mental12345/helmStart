@@ -14,13 +14,19 @@ On Windows, do:
 # Installing Tiller
 
 * Create a tiller serviceaccount
+```
 kubectl -n kube-system create serviceaccount tiller
-
+```
 * Bind the serviceaccount to the cluster-admin role
+```
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+```
 
 * We can run helm init, which installs Tiller on our cluster 
+```
 helm init --service-account tiller
+
+```
 
 Get the pods in the kube-system namespace
 ```
